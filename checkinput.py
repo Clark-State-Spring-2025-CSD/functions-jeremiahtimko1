@@ -4,3 +4,13 @@
 #The function will continue to prompt the user to enter an integer until a proper integer is entered.
 #The most direct way of doing this would be using a try block, which has not been covered yet. You will need to research this.
 #Write supporting code to call the function, and then display the number that was entered.
+
+def get_integer(prompt_msg, error_msg):
+    while True:
+        try:
+            return int(input(prompt_msg))
+        except:
+            print(error_msg)
+
+number = get_integer("Enter an integer: ", "Invalid input. Please enter a valid integer.")
+print(number)
